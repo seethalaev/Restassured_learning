@@ -17,7 +17,7 @@ public class Basics {
 		//Validate if Add place API is working as expected
 		
 		RestAssured.baseURI="https://rahulshettyacademy.com";
-		given().queryParam("key","qaclick123").header("Content-Type","application/json").body("{\r\n"
+		given().log().all().queryParam("key","qaclick123").header("Content-Type","application/json").body("{\r\n"
 				+ "  \"location\": {\r\n"
 				+ "    \"lat\": -38.383494,\r\n"
 				+ "    \"lng\": 33.427362\r\n"
@@ -33,7 +33,8 @@ public class Basics {
 				+ "  \"website\": \"http://google.com\",\r\n"
 				+ "  \"language\": \"French-IN\"\r\n"
 				+ "}\r\n"
-				+ "")
+				+ "").when().post("maps/api/place/add/json")
+				.then().log().all().assertThat().statusCode(200);
 		
 	}
 
