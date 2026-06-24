@@ -11,7 +11,9 @@ public class ComplexJson {
 		//print no of courses returned by API
 		int coursesize=js.getInt("courses.size()");
 		System.out.println("course size is "+coursesize);
-		
+		//print purchase amount
+		int purchaseamnt=js.getInt("dashboard.purchaseAmount");
+		System.out.println("purchase amount "+purchaseamnt);
 	}
 
 }
