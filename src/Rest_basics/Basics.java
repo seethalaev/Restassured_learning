@@ -46,7 +46,6 @@ public class Basics {
 		System.out.println(actualadrs);
 		Assert.assertEquals(actualadrs,newAddress);
 		
-		//git new check
 		
 }
 }
