@@ -14,6 +14,9 @@ public class ComplexJson {
 		//print purchase amount
 		int purchaseamnt=js.getInt("dashboard.purchaseAmount");
 		System.out.println("purchase amount "+purchaseamnt);
+		//print title of first course
+		String titlefirstcourse=js.get("courses[0].title");
+		System.out.println("Title of first course-"+titlefirstcourse);
 	}
 
 }
